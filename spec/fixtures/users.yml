@@ -1,0 +1,10 @@
+one:
+  email: arichan@ne.jp
+  crypted_password: "$2a$10$wTc34gBqr2tKTonb9jSfYO4LWTV7iMNMcTRf9qnIVQ0aLhnzAw/Su"
+  salt: "XAvczYLvQ2BdqKa3wZRx"
+# column: value
+#
+two:
+  email: koji@ne.jp
+  crypted_password: "$2a$10$wTc34gBqr2tKTonb9jSfYO4LWTV7iMNMcTRf9qnIVQ0aLhnzAw/Su"
+  salt: "XAvczYLvQ2BdqKa3wZRx"

@@ -1,6 +1,7 @@
 class CommentsController < ApplicationController
-
+　#destroyは認証を必須とし、パスワードを設ける(知らない人は操作出来ないようにする)
   http_basic_authenticate_with name: "user", password: "secret", only: :destroy
+
   def create
     @post = Post.find(params[:post_id])
     @comment = @post.comments.create(comment_params)
