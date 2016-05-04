@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
-  #indexとshow以外のアクションの際は認証を必須とし、パスワードを設ける(知らない人は操作出来ないようにする)
-  http_basic_authenticate_with name: "user", password: "secret", except: [:index, :show]
+
+  before_filter :require_login, only:[:new, :create, :edit, :update, :destroy]
 
   def index
     @posts = Post.all
