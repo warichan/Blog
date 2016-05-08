@@ -4,6 +4,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
+    render :index
   end
 
   def new
@@ -22,10 +23,12 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    render :show
   end
 
   def edit
     @post = Post.find(params[:id])
+    render :edit
   end
 
   def update
@@ -40,15 +43,12 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
-
     redirect_to post_path
   end
 
+  private
 
-private
-
-def post_params
-  params.require(:post).permit(:title, :text)
-end
-
+  def post_params
+    params.require(:post).permit(:title, :text)
+  end
 end
